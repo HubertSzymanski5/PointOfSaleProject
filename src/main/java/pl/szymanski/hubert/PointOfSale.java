@@ -3,7 +3,7 @@ package pl.szymanski.hubert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PointOfSale {
+public class PointOfSale implements IPointOfSale {
 
     // Input Dev - BarCodeScanner
     private ICodeScanner codeScanner;
@@ -37,6 +37,7 @@ public class PointOfSale {
     }
 
     // try to scan and add item to bill
+    @Override
     public void scanItem() {
         // obtain barcode
         String barCode = codeScanner.getCode();
